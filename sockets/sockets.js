@@ -8,4 +8,7 @@ io.on('connection', client => {
         console.log('Mensaje', payload);
         io.emit('mensaje', { admin: 'New message' });
     });
+    client.on('emitir-mensaje', (payload) => {
+        client.broadcast.emit('emitir-mensaje', payload);
+    });
 });

@@ -30,6 +30,10 @@
         socket.on('mensaje', function (payload) {
             console.log('Mensaje from server:', payload);
         });
+
+        socket.on('emitir-mensaje', function (payload) {
+            console.log('Received from server:', payload);
+        });
     </script>
 </body>
 
