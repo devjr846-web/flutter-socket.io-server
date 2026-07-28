@@ -34,6 +34,10 @@
         socket.on('emitir-mensaje', function (payload) {
             console.log('Received from server:', payload);
         });
+
+        socket.on('active-bands', function (bands) {
+            console.table(bands);
+        });
     </script>
 </body>
 
